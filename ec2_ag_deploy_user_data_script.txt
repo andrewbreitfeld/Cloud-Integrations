@@ -1,4 +1,4 @@
 #!/bin/bash
 yum install wget -y
-wget -O Dynatrace-ActiveGate-Linux-x86-1.301.2.sh "https://<envurlhere>/api/v1/deployment/installer/gateway/unix/latest?arch=x86" --header="Authorization: Api-Token dt0c01.LBX5C5AURQZJLR6P2PA4MGVX.T4WDW3ZYVSXZNVLP7CPODKZG3YESXQXVPDZB2CDMYXIU2KZ3LRTROP4V46LXSD45"
+wget -O Dynatrace-ActiveGate-Linux-x86-1.301.2.sh "https://<envurlhere>/api/v1/deployment/installer/gateway/unix/latest?arch=x86" --header="Authorization: Api-Token <API-Token HERE>"
 /bin/bash Dynatrace-ActiveGate-Linux-x86-1.301.2.sh
