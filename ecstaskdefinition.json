@@ -1,0 +1,71 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:577638397009:task-definition/oneagent:1",
+    "containerDefinitions": [
+        {
+            "name": "oneagent",
+            "image": "dynatrace/oneagent",
+            "cpu": 0,
+            "memoryReservation": 256,
+            "portMappings": [],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "ONEAGENT_INSTALLER_SCRIPT_URL",
+                    "value": "https://<envurlhere>/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default&Api-Token=dt0c01.ZUFS5RB36XE3Q3W6VFG2LHPT.ZJPLCRYEIZZG6TLLDJ7Q5C7AN75RWOQ2OMB3SQRYB4TZUOHNGXSPSNZC7RRNG6IP"
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "oneagent",
+                    "containerPath": "/mnt/root"
+                }
+            ],
+            "volumesFrom": [],
+            "privileged": true,
+            "readonlyRootFilesystem": false,
+            "systemControls": []
+        }
+    ],
+    "family": "oneagent",
+    "networkMode": "host",
+    "revision": 1,
+    "volumes": [
+        {
+            "name": "oneagent",
+            "host": {
+                "sourcePath": "/"
+            }
+        }
+    ],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.privileged-container"
+        },
+        {
+            "name": "ecs.capability.pid-ipc-namespace-sharing"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "pidMode": "host",
+    "ipcMode": "host",
+    "registeredAt": "2024-09-12T12:49:38.816Z",
+    "registeredBy": "arn:aws:iam::577638397009:root",
+    "tags": []
+}
