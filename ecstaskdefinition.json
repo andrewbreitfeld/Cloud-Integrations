@@ -11,7 +11,7 @@
             "environment": [
                 {
                     "name": "ONEAGENT_INSTALLER_SCRIPT_URL",
-                    "value": "https://<envurlhere>/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default&Api-Token=dt0c01.ZUFS5RB36XE3Q3W6VFG2LHPT.ZJPLCRYEIZZG6TLLDJ7Q5C7AN75RWOQ2OMB3SQRYB4TZUOHNGXSPSNZC7RRNG6IP"
+                    "value": "https://<envurlhere>/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default&Api-Token=<API-Token HERE>"
                 }
             ],
             "mountPoints": [
